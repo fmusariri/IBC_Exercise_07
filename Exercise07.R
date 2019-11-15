@@ -27,4 +27,12 @@ sepal_width <- function(x,n){
   answer2b <- (x[x$Sepal.Width>n,])
   return(answer2b)
 }
-  
+
+#Write a comma-delimited file for a given species
+#x= dataframe we are working on, in this case iris
+#y= desired species in quotes, e.g. "setosa"
+#z= desired species .csv file name in quotes, e.g. species_csv(iris,"setosa","setosa.csv")
+species_csv <- function(x,y,z){
+  subset <- x[x$Species==y,]
+  write.table(subset,file=z,row.names=FALSE,sep=",")
+}

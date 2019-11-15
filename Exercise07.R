@@ -33,5 +33,5 @@ sepal_width <- function(x,n){
 #taxa= desired species in quotes, e.g. "setosa"
 species_csv <- function(x,taxa){
   subset <- x[x$Species==taxa,]
-  write.table(subset, file=paste(taxa, ".csv" , sep="" ), row.names=FALSE,sep=",")
+  write.table(subset, file=paste(taxa, ".csv" , sep=""), row.names=FALSE,sep=",")
 }
